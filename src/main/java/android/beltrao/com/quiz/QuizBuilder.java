@@ -8,9 +8,10 @@ public class QuizBuilder {
     public QuizBuilder() {
         this.quiz = new Quiz();
     }
-    public Quiz addQuestion(Question q) {
+
+    public QuizBuilder addQuestion(Question q) {
         this.quiz.getQuestions().add(q);
-        return  this.quiz;
+        return  this;
     }
 
     public Quiz removeQuestion(int index){

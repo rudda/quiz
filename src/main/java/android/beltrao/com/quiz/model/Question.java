@@ -15,6 +15,19 @@ public class Question {
         this.anwsers = new ArrayList<>();
     }
 
+    public Question(String title, String body, Drawable ilustration) {
+        this.title = title;
+        this.body = body;
+        this.ilustration = ilustration;
+        this.anwsers = new ArrayList<>();
+    }
+
+    public Question(String title, String body) {
+        this.title = title;
+        this.body = body;
+        this.anwsers = new ArrayList<>();
+    }
+
     public String getTitle() {
         return title;
     }
@@ -47,4 +60,8 @@ public class Question {
         this.anwsers = anwsers;
     }
 
+    public  Question addAnser( Answer a ){
+        this.getAnwsers().add(a);
+        return this;
+    }
 }

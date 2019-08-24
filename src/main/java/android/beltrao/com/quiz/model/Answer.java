@@ -11,6 +11,11 @@ public class Answer {
         this.isRigth = isRigth;
         this.isChecked = false;
     }
+    public Answer(String value) {
+        this.value = value;
+        this.isRigth = false;
+        this.isChecked = false;
+    }
 
     public String getValue() {
         return value;
@@ -37,6 +42,6 @@ public class Answer {
     }
 
     public boolean thatIsCorrect(){
-        return  this.isChecked() && this.isRigth();
+        return  this.isChecked() && this.isRigth() == true ;
     }
 }
